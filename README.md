@@ -25,12 +25,12 @@
 ##### 2.brain storming and wireframes: ~ 30 min
 
 used [moqups](https://moqups.com/) to create wireframs ( I dont draw well! needed a good tool to create clean and clear wireframes)
-[landing page WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/landing-wireframe.png)
-[landing page](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/landing.png)
-[search and compare WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/compare-wireframe.png)
-[search and compare](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/compare.png)
-[search by keywords WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/keyword-wireframe.png)
-[search by keywords](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/keywords.png)
+![landing page WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/landing-wireframe.png)
+![landing page](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/landing.png)
+![search and compare WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/compare-wireframe.png)
+![search and compare](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/compare.png)
+![search by keywords WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/keyword-wireframe.png)
+![search by keywords](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/keywords.png)
 ##### 3. Creating basic interface and main ajax calls ~ 1 hour
   created simple forms and used jQuery's $.ajax() method to get data from the api.
   
