@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title> Lexigram | Knowledge Graph </title>
+   <!--style sheets-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+   <link rel="stylesheet" href="style/style.css">
+   <link rel="icon" href="http://www.lexigram.io/media/images/logo_home.png">
+   <!-- scripts -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+   <script src="scripts/script.js"></script>
+  </head>
+  <body>
+    <div class="main_container">
+      <header>
+        <nav class="navbar">
+          <div class="container">
+            <ul class="navbar-list left">
+            <li class="navbar-item">
+              <a class="navbar-link" href="http://www.lexigram.io">
+                <img  alt="company-logo" class="navbar-img" src="http://www.lexigram.io/media/images/logo_home.png">
+              </a>
+            </li>
+            <li class="navbar-item"><a class="navbar-link" href="#">Features</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="#">About</a></li>
+            </ul>
+            <ul class="navbar-list right">
+              <li class="navbar-item"><a class="navbar-link" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <div class=" controllers">
+      <a  id="compare_link" class="button button-primary controller" href="#">Search &amp; Compare</a>
+      <a id="by_key_link" class="button button-primary controller" href="#">Search By Keywords</a>
+    </div>
+    <div class="landing_message">
+      <h2> Lexigram API Services </h2>
+    </div>
+    <div id="compare" class="compare_section container">
+      <h4 class="title"> Search Two Consept for comparison </h4>
+      <form id="compare_form">
+        <div class="row">
+          <div class="six columns">
+            <label for="cui_one">CUI #1</label>
+            <input id="cui_one" class="u-full-width" type="text" placeholder="Consept id" >
+          </div>
+          <div class="six columns">
+            <label for="cui_one">CUI #2</label>
+            <input id="cui_two" class="u-full-width" type="text" placeholder="Consept id" >
+          </div>
+        </div>
+        <input class="button-primary" type="submit" id="compare_form_submit" value="Compare">
+      </form>
+    </div>
+    <div id="keyword" class="keyword_search container">
+      <h4 class="title"> Search By Keywords </h4>
+      <form id="keyword_form">
+        <div class="eight columns">
+          <label for="keywords">Keywords:</label>
+          <input id="keywords" class="u-full-width" type="text" placeholder="eg: diabetes" >
+        </div>
+        <div class="four columns">
+          <label for="threshold">Threshold:</label>
+          <input id="threshold" class="u-full-width" type="text" placeholder="range: 0.3 - 1" >
+        </div>
+        <div class="checkboxes">
+            <label> Types</label>
+            <label for="anatomy" >
+              <input id="anatomy" class="box" type="checkbox">
+              <span class="label-body">anatomy</span>
+            </label>
+            <label for="devices" >
+              <input id="devices" class="box" type="checkbox">
+              <span class="label-body">devices</span>
+            </label>
+            <label for="drugs" >
+              <input  id="drugs" class="box" type="checkbox">
+              <span class="label-body">drugs</span>
+            </label>
+            <label for="findings" >
+              <input id="findings" class="box" type="checkbox">
+              <span class="label-body">findings</span>
+            </label>
+            <label for="modifiers" >
+              <input id="modifiers" class="box" type="checkbox">
+              <span class="label-body">modifiers</span>
+            </label>
+            <label for="problems" >
+              <input  id="problems" class="box" type="checkbox">
+              <span class="label-body">problems</span>
+            </label>
+            <label for="procedures" >
+              <input id="procedures" class="box" type="checkbox">
+              <span class="label-body">procedures</span>
+            </label>
+        </div>
+        <input class="button-primary" type="submit"  id="keyword_submit" value="Search">
+      </form>
+    </div>
+    <div id="results" class="container">
+      <table class="u-full-width"  id="result_table">
+        <script id="result_template" type="text/x-handlebars-template">
+        <thead>
+          <tr>
+            <th>CUI</th>
+            <th>Label</th>
+            <th>Synonyms</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each concept}}
+          <tr>
+            <td>{{cui}}</td>
+            <td>{{label}}</td>
+            <td>{{synonyms}}</td>
+            <td>{{types}}</td>
+          </tr>
+         {{/each}}
+         </tbody>
+        </script>
+      </table>
+    </div>
+    </div>
+        <footer class="container footer">
+      <hr>
+      &copy; 2015 Lexigram, Inc. All rights reserved.
+    </footer>
+  </body>
+</html>
