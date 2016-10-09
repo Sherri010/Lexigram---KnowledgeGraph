@@ -50,4 +50,5 @@ If I had more time, these would be the parts I would improve:
  - responsive design specially in mobile view ( maybe show brief data about the concepts in small screens)
  - show the selected keyword and types on top the result table
  - changing the alert messages to something better
+ - adding "loading..." notification while ajax waits for server response to let the user know the process is happnening.
  
