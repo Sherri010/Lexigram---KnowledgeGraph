@@ -9,7 +9,7 @@
 ### Technologies:
 - HTML
 - CSS (including Skeleton library)
--Javascript / jQuery
+- Javascript / jQuery
 
 
 
