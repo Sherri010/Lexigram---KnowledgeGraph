@@ -36,8 +36,8 @@ used [moqups](https://moqups.com/) to create wireframs ( I dont draw well! neede
   
 ##### 4. Creating the styled interface( including handlebars) and match that with lexigram.io style ~ 1hour & 30 min
 I created separate sections for each search. The results are rendered into a table using handlebar library.
-==The reason why== the result table does not disappear when switching to another search feature is to allow the user to use the retrieved info from the previous search in the next one.
-== nav bar links == are not linked to any other webpages yet, it's a dimonstration of how to navigation would be.
+**The reason why** the result table does not disappear when switching to another search feature is to allow the user to use the retrieved info from the previous search in the next one.
+**nav bar links** are not linked to any other webpages yet, it's a dimonstration of how to navigation would be.
 
 ##### 5.Documentation and Optimization ~30 mins
 - adding data validation for the fields
