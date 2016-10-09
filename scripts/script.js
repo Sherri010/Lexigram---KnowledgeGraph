@@ -37,16 +37,7 @@ $(document).ready(function(){
       $.when(getConceptById(custom_URL_List[0]), getConceptById(custom_URL_List[1])).done(function(con1, con2){
         results.push(con1[0]);
         results.push(con2[0]);
-
-        //clearing the previuse results
-        var scripts = $('#result_template');
-        $('#result_table').html('').append(scripts);
-        //generating html string using results and handlebars
-        var source = $('#result_template').html();
-        var template = Handlebars.compile(source);
-        var generatedHTML = template({concept : results});
-        $('#result_table').append(generatedHTML);
-
+        render(results);
       });
     } else{
       alert("Please enter both CUIs before submitting");
@@ -92,14 +83,19 @@ $(document).ready(function(){
     url:'https://api.lexigram.io/search?'+search_keys,
     data:[],
     success:function(data){
-        var scripts = $('#result_template');
-        $('#result_table').html('').append(scripts);
-        //generating html string using results and handlebars
-        var source = $('#result_template').html();
-        var template = Handlebars.compile(source);
-        var generatedHTML = template({concept : data});
-        $('#result_table').append(generatedHTML);
+      render(data);
     }
    });
  });
+
+ //render receieved data on the view
+  function render(data){
+    var scripts = $('#result_template');
+    $('#result_table').html('').append(scripts);
+    //generating html string using results and handlebars
+    var source = $('#result_template').html();
+    var template = Handlebars.compile(source);
+    var generatedHTML = template({concept : data});
+    $('#result_table').append(generatedHTML);
+  }
 });
