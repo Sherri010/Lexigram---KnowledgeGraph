@@ -1,8 +1,8 @@
-#Lexigram Knowlegde Graph - Search Feature
+#Lexigram Knowledge Graph - Search Feature
 
 ### Development Environment:
 
-- OS: Linux - Ubutnu
+- OS: Linux - Ubuntu
 - Text Editor: Sublime
 - Main Browser: Chrome
 
@@ -20,11 +20,11 @@
 
 ##### 1.studying the api and learning about lexgiram.io's style : ~30 min
 
-my goal was to keep the branding consistent between the main website and this feature. I tried to use the same color scheme that is being used in the main website. Lexigram is using skeleton library for responsive layouts and this was my first time using this library.Therefore I spent about 15 minutes reading/learning Skeleton's guide.
+my goal was to keep the branding consistent between the main website and this feature. I tried to use the same color scheme that is being used in the main website. Lexigram is using skeleton library for responsive layouts and this was my first time using this library. Therefore I spent about 15 minutes reading/learning Skeleton's guide.
 
 ##### 2.brain storming and wireframes: ~ 30 min
 
-used [moqups](https://moqups.com/) to create wireframs ( I dont draw well! needed a good tool to create clean and clear wireframes)
+used [moqups](https://moqups.com/) to create wireframes ( I don’t draw well! needed a good tool to create clean and clear wireframes)
 ![landing page WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/landing-wireframe.png)
 ![landing page](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/landing.png)
 ![search and compare WF](https://github.com/Sherri010/Lexigram---KnowlegdeGraph/blob/master/wireframs/compare-wireframe.png)
@@ -47,8 +47,8 @@ I created separate sections for each search. The results are rendered into a tab
 
 ##### 6.Future work:
 If I had more time, these would be the parts I would improve:
- - responsive design specially in mobile view ( maybe show brief data about the concepts in small screens)
+ - responsive design specially in mobile view (maybe show brief data about the concepts in small screens)
  - show the selected keyword and types on top the result table
  - changing the alert messages to something better
- - adding "loading..." notification while ajax waits for server response to let the user know the process is happnening.
- 
+ - adding "loading..." notification while ajax waits for server response to let the user know the process is happening.
+
