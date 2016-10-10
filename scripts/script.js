@@ -22,7 +22,7 @@ $(document).ready(function(){
     $('#keyword').show();
  });
 
-//event listernes for form submissions
+//event listeners for form submissions
   $('#compare_form').on('submit',function(e){
     e.preventDefault();
     // if both CUI's are entered
@@ -33,7 +33,7 @@ $(document).ready(function(){
       custom_URL_List.push('https://api.lexigram.io/concepts/'+ $('#cui_one').val() +'?'+my_API_key);
       custom_URL_List.push('https://api.lexigram.io/concepts/'+ $('#cui_two').val() +'?'+ my_API_key);
 
-  //making ajax called and waiting until both concepts are return before rendering the template for the view
+      //making ajax calls and waiting until both concepts are returned before rendering the template for the view
       $.when(getConceptById(custom_URL_List[0]), getConceptById(custom_URL_List[1])).done(function(con1, con2){
         results.push(con1[0]);
         results.push(con2[0]);
@@ -43,7 +43,7 @@ $(document).ready(function(){
       alert("Please enter both CUIs before submitting");
     }
 
-//function to make ajax call
+  //function to make ajax call
   function getConceptById(customURL) {
     return $.ajax({
                  method:"GET",
@@ -58,7 +58,7 @@ $(document).ready(function(){
    e.preventDefault();
    var key = $('#keywords').val();
    var search_keys = "";
-   //prevents futhur action if keyword is not provided
+   //prevents furthur action if keyword is not provided
    if(key.length < 1){
     return alert('Please enter a valid keyword.')
    }else{
@@ -68,7 +68,7 @@ $(document).ready(function(){
    var threshold = $('#threshold').val() || 0.3;
    var list = $('.checkboxes').find('.box');
 
-   //generating the 'key=value' based on the selected checkboxes
+   //generating the 'key=value' pairs based on the selected checkboxes
    $.each(list,function(index){
     if(list[index].checked){
       search_keys += 'show_type=' + list[index].id +'&';
@@ -88,7 +88,7 @@ $(document).ready(function(){
    });
  });
 
- //render receieved data on the view
+ //render received data on the view
   function render(data){
     var scripts = $('#result_template');
     $('#result_table').html('').append(scripts);
