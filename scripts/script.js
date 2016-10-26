@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var my_API_key = 'apikey=lxg123321';
+  var my_API_key = 'apikey=xxxxxxxxxxx';
   console.log("js loaded!");
   $('#compare').hide();
   $('#keyword').hide();
